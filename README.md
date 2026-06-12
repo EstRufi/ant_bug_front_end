@@ -22,7 +22,7 @@ deste contexto pensamos em cada detalhe visando trazer a melhor experiência pos
 ---
 ## Repositório Principal
 
-[Repositório principal](https://github.com/PyetroSouza/pi_ant-bug)
+[Principal](https://github.com/PyetroSouza/pi_ant-bug)
 
 ## Repositório de Back-end
 
