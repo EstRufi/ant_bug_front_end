@@ -24,10 +24,8 @@ deste contexto pensamos em cada detalhe visando trazer a melhor experiência pos
 
 [Back-end](https://github.com/PyetroSouza/ant_bug_back-end.git)
 
-## Repositório de Front-end
-
-[Front-end](https://github.com/EstRufi/ant_bug_front_end)
-
 ## Link do Protótipo de alta fidelidade(Figma)
 
 [Figma](https://www.figma.com/design/h8UN0gntL82OyDvSEJxor1/Planeta-Vegano?node-id=0-1&p=f&t=cfh5C4IaWWPrFkru-0)
+
+## Repositírio do Front-End do ADM
