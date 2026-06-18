@@ -5,7 +5,7 @@ vitrineSaibaMais.id = 'vitrine-cards';
 
 const card = function(dados){
     vitrineSaibaMais.replaceChildren();
-
+    vitrineSaibaMais.className = 'informacaoCard'
     const conteinerHorizontal = document.createElement('div')    
     conteinerHorizontal.className = 'conteinerHorizontal'
 
@@ -39,7 +39,7 @@ export async function criarCards(){
     const dadosApi = await buscarDadosApi()
     const main = document.getElementById('main')
 
-
+    vitrineSaibaMais.className = "cardsAll"
 
     dadosApi.forEach(itensCard => {
         const conteiner = document.createElement('div')
@@ -65,7 +65,7 @@ export async function criarCards(){
         const subCategoria = document.createElement('p')
         subCategoria.textContent = itensCard.status
 
-        conteiner.append(titulo,imgProduto,miniInformacao,bntSaibaMais,subCategoria)
+        conteiner.append(imgProduto,titulo,miniInformacao,bntSaibaMais,subCategoria)
         vitrineSaibaMais.appendChild(conteiner)
     });
 

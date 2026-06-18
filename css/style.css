@@ -145,11 +145,56 @@ section{
 }
 
 /*cards*/
-
-.conteinerCards{
-    width: 562px;
-    height: 730px;
+.cardsAll{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 47px;
+    margin: 40px;
+    padding: 10px;
+    
 }
+.conteinerCards{
+    width: 362px;
+    height: 530px;
+    background-color: var(--cor-cards-bage);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    gap: 22px;
+    
+}
+
+.saibaMais{
+    border: none;
+    width: 160px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 25px;
+    background-color: var(--verde-butao);
+}
+.saibaMais:hover{
+    background-color: var(--fundo-verde);
+    color: #fafafa;
+    transition: 0.5s;
+}
+
+.informacaoCard{
+    background-color: var(--cor-cards-bage);
+    margin: 40px;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.conteinerHorizontal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 
 /* Footer */
 
