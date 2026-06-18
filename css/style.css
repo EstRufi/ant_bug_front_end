@@ -163,6 +163,7 @@ section{
     justify-content: center;
     text-align: center;
     display: flex;
+    padding: 10px;
     flex-direction: column;
     border-radius: 25px;
     gap: 22px;
@@ -203,13 +204,14 @@ section{
 
 .tituloSaibaMais{
     min-height: 80px;
-    min-width: 300px;
+    min-width: 100px;
     padding: 30px;
     border-radius: 25px;
     justify-content: center;
     display: flex;
     align-items: center;
     background-color: var(--verde-butao);
+    text-align: center;
     
 }
 
@@ -222,6 +224,8 @@ section{
 
 .subCategoriaInfo{
     font-size: 40px;
+    text-align: center;
+    min-width: 300px;
 }
 
 .descricao{
