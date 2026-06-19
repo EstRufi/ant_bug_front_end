@@ -78,6 +78,10 @@ section{
 
 /* Buttoes - main */
 
+.imgProduto{
+    width: 300px;
+}
+
 .listaButoes{
     display: flex;
     justify-content: center;
