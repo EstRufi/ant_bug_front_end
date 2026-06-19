@@ -1,13 +1,11 @@
 export function dropdown(){
     window.addEventListener("click", (event) => {
         
+        // Verifica se o elemento clicado possui a classe do botão de categoria
         if (event.target.classList.contains("bnt-categoria")) {
             
+            // Localiza o próximo elemento irmão (a caixinha do menu) e liga/desliga a classe "mostrar"
             event.target.nextElementSibling.classList.toggle("mostrar");
         } 
     });
 }
-
-//event target é para ver o botão que voce acabou de clicar
-//next element sibling localiza a qual a caixa especifica daquele botao
-// toggle serve pra ligar e desligar a caixa/dropdown 

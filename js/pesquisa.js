@@ -3,30 +3,29 @@
 export function ativarPesquisa(dados) {
     const input = document.querySelector('input[type="text"]') || document.querySelector('input[placeholder*="Pesquise"]');
     
+    // Se não encontrar o campo de input na tela, interrompe a função
     if (!input) return;
 
     input.addEventListener('input', () => {
         const digitado = input.value.toLowerCase().trim();
 
-        //saiba mais
-        const cardsDeBaixo = Array.from(document.querySelectorAll('div, section')).filter(el => {
-            return el.innerHTML.includes('Saiba Mais') && el.querySelector('img');
-        });
+        // Captura todos os containers de cards gerados pelo seu card.js
+        const cardsDeBaixo = document.querySelectorAll('.conteinerCards');
 
-        //mostra todos os card se não tiver nada escrito
+        // Se a barra de pesquisa for limpa, exibe todos os produtos de volta
         if (digitado === "") {
             cardsDeBaixo.forEach(card => card.style.display = "");
             return;
         }
 
-        //Filtra
+        // Filtra os cards comparando o texto digitado com o conteúdo do card
         cardsDeBaixo.forEach(card => {
             const textoDoCard = card.textContent.toLowerCase();
 
             if (textoDoCard.includes(digitado)) {
-                card.style.display = ""; //aparece
+                card.style.display = ""; // Mostra o card se encontrar o termo
             } else {
-                card.style.display = "none"; //esconde
+                card.style.display = "none"; // Esconde o card se não encontrar
             }
         });
     });

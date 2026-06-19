@@ -2,22 +2,23 @@
 import { criarCards } from "./card.js";
 import { moverCarrossel } from "./carrossel.js";
 import { dropdown } from "./dropdown.js";
-import { ativarPesquisa } from "./pesquisa.js"; // 1. Importa a função do arquivo novo
+import { ativarPesquisa } from "./pesquisa.js";
 
 export async function buscarDadosApi(){
     try {
-        const url = `https://api.tvmaze.com/shows`
+        const url = `http://localhost:7070/v1/planetaverde/admin/produto`
         const response = await fetch(url)
-
         
         if(!response.ok) throw new Error("requisição falhou");
         const dados = await response.json()
 
-        return dados
+        const listaProdutos = dados.response && dados.response.produto;
+
+        return Array.isArray(listaProdutos) ? listaProdutos : [];
         
     } catch (error) {
-        alert("não consegui pegar nada")
-        return [] 
+        console.error("Erro ao buscar dados da API local:", error);
+        return [];
     }
 }
 
@@ -30,6 +31,5 @@ async function inicializar() {
     moverCarrossel();
     dropdown();
 }
-
 
 inicializar();
